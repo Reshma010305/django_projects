@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <h1><i><u>Student Records</u></i></h1>
+    <a href="{% url 'add_student' %}">Add New Student</a>
+    <ul>
+        {% for student in students %}
+        <li>{{student.name}} ({{student.age}} years old) - {{student.email}}</li>
+    {% endfor %}
+    </ul>  
+</body>
+</html>
